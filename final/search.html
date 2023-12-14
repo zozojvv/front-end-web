@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYThrift</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="left">
+            <h1><a href="index.html">NYThrift</a></h1>
+        </div>
+        <div class="right">
+            <nav class="dropdownmenu">
+                    <h4><a href="#">Stores</a></h4>
+                    <div id="submenu" >
+                        <input type="text" id="autocomplete2" placeholder="   Search nearby stores...">
+                    </div>
+            </nav>
+            <h4><a href="">Log in</a></h4>
+        </div>
+    </header>
+    
+
+    <div class="search-container">
+        <div class="icon-container">
+            <img id="clothes-icon" src="clothes.png" alt="clothes icon">
+            <img id="location-icon" src="location.png" alt="location icon">
+        </div>
+        <div class="text-container">
+            <h1>Enter your location: </h1>
+        </div>
+        <div class="form-group">
+            <br>
+            <div id="map"></div>
+            <input type="text" class="form-control" id="autocomplete" placeholder="   Search neighborhood, street, apartment..." />  
+        </div>
+            <div class="form-group">
+                <br> 
+                <select class="form-control" id="type">
+                    <option id='clothing_store'>  Clothes</option>
+                    <option id='jewelry_store'>  Jewelry</option>
+                    <option id='home_goods_store'>  Home Goods</option>    
+                </select>
+            </div>
+            <a href="#down2">
+                <img id="scroll" src="scroll.png" alt="scroll down" style="cursor: pointer;">
+            </a>  
+
+
+        <section id="down2">
+            <!-- <div id="zipCodeDisplay">ZIP Code: </div> -->
+            <div id="store-container">
+                <div id="places"></div>
+                <!-- <div class="store">
+                    <img src="123.png" alt="123.png">
+                    <p>name</p>
+                </div> -->
+            </div>
+        </section>
+
+        
+
+    <div class="footer">
+        <p href="index.html" style="padding-left: 10px;">© 2023 NYThrift</p>
+        <p href="contact.html" style="padding-left: 10px;">Contact</p>
+        <p href="about.html" style="padding-left: 10px;">About</p>
+    </div>
+
+    <script src="script.js" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHIwquBQ8zHxOkb_XIoa8bdZwMERIP4qI&libraries=places,geometry&callback=initMap"
+    async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+
+
+
+</html>

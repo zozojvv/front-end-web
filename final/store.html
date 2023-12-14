@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="left">
+                <h1><a href="index.html">NYThrift</a></h1>
+            </div>
+            <div class="right">
+                <nav class="dropdownmenu">
+                        <h4><a href="#">Stores</a></h4>
+                        <div id="submenu" >
+                            <input type="text" id="autocomplete2" placeholder="   Search nearby stores...">
+                        </div>
+                </nav>
+                <h4><a href="">Log in</a></h4>
+            </div>
+        </header>
+        <section class="left-section">
+        </section>
+        <section class="right-section">
+            <div class="review-section">
+                <h2 style="margin-top: 80px;">Review</h2>
+                <textarea placeholder="Write your reviews here..."></textarea>
+                <button>Post</button>
+
+                <div class="reviews">
+                    <div class="review">
+                        <img src="path_to_profile_pic.jpg" alt="User Profile">
+                        <div class="review-content">
+                            <p class="user-name">User #1</p>
+                            <p>Blahblahblahblahblahblahblah...</p>
+                            <button class="like-button">Like</button>
+                            <span class="like-count">20 Likes</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <img src="path_to_profile_pic.jpg" alt="User Profile">
+                        <div class="review-content">
+                            <p class="user-name">User #1</p>
+                            <p>Blahblahblahblahblahblahblah...</p>
+                            <button class="like-button">Like</button>
+                            <span class="like-count">20 Likes</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <img src="path_to_profile_pic.jpg" alt="User Profile">
+                        <div class="review-content">
+                            <p class="user-name">User #1</p>
+                            <p>Blahblahblahblahblahblahblah...</p>
+                            <button class="like-button">Like</button>
+                            <span class="like-count">20 Likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
+
+<script src="script.js" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHIwquBQ8zHxOkb_XIoa8bdZwMERIP4qI&libraries=places,geometry&callback=initMap"
+async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+

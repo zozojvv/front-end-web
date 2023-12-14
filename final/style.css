@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+  html {
+      scroll-behavior: smooth;
+  }
+  body {
+      font-family: 'Mulish', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+  
+  .header {
+      top: 0;
+      left: 0;
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      background-color: white;
+      z-index: 100;
+  }
+  .right {
+      display: flex;
+      margin-left: auto;
+  }
+.left, .right {
+    display: flex;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Submenu */
+#submenu {
+    width: 100vw;
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    transform: translateX(-84%);
+}
+.dropdownmenu {
+    position: relative; /* Needed for absolute positioning of submenu */
+    /* Other styles... */
+}
+/* Show submenu on hover */
+.dropdownmenu:hover #submenu {
+    display: block; 
+}
+
+/* Search Input Styles */
+#autocomplete2{
+    width: 98%;
+    height: 5vh;
+    margin-left: 10px;
+    padding-left: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+.dropdownmenu:hover #submenu, #submenu:hover, #header:hover {
+    display: block;
+}
+#autocomplete2:focus {
+    display: block;
+}
+#submenu:focus-within {
+    display: block;
+}
+
+
+
+.header a:hover {
+    color: #F9D2B1;
+}
+
+
+  a { 
+      text-decoration: none;
+      color: black;
+  } 
+  
+  h1 {
+      color: black;
+      font-size: 32px;
+      font-weight: 200;
+  }
+  
+  h2 {
+      color: black;
+      font-size: 28px;
+      font-weight: 100;
+  } 
+  
+  h3 {
+      color: black;
+      font-size: 28px;
+      font-weight: 100;    
+  }
+  
+  h4 {
+      color: black;
+      font-size: 16px;
+      font-weight: 100;
+  }
+  
+  p {
+      color: black;
+      font-size: 16px;
+      font-weight: 100;
+  }
+  
+  .home-container {
+      /* min-height: 100vh; */
+      width: 100%;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      overflow-x: hidden;
+  }
+  section {
+      position: relative;
+      width: 70%; 
+      margin: 0;
+      padding: 0;
+  }
+  
+  .home-intro {
+      padding-top: 16vh;
+      background-image: url('bg.jpeg');
+      background-size: auto 65% auto;
+      background-repeat: no-repeat; 
+      background-position: 85% 50%;
+  }
+  
+  .home-intro h1 {
+      line-height: 1.5; 
+  }
+  .home-intro {
+      height: 100vh; 
+      background-color: white;
+  }
+  .home-option{
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      width: 100vw;
+      padding: 40px 0;
+      padding-top: 25vh;
+      background-image: url('bg2.png');
+      background-size: auto 15% auto;
+      background-repeat: no-repeat; 
+      background-position: 40% 45%;
+  }
+  
+  .home-answer-buttons {
+      display: flex;
+      gap: 5.5vw;
+  }
+
+
+  /* ----------------- Search page -------------- */
+  .search-container {
+    width: 100%; 
+    height: 100vh;
+    margin: 0 ; 
+    margin-top: 0vh;
+    padding: 20px;  
+    box-sizing: border-box;
+    background-color: #F5F0E4;
+    align-items: center;
+    justify-content: center;
+  }
+ .icon-container { 
+    width: 96vw;
+    height: 50vh;
+ }
+ .text-container {
+    width: 60%;
+    height: 10vh;
+    z-index: 90;
+    position: relative;
+    left: 30%;
+    bottom: 9%;
+    /* transition: all 2s ease-in-out; */
+ }
+
+ /* --- animate images --- */
+ #clothes-icon {
+    width: 580px;
+    height: 220px;
+ }
+ #location-icon {
+    width: 23vw;
+    height: 50vh;
+    z-index: 1;
+}
+#clothes-icon, #location-icon {
+    position: absolute;
+    transition: all 2s ease-in-out;
+}
+#clothes-icon {
+    position: absolute;
+    top: 35%;
+    left: -20%;
+    transition: all 2s ease-in-out;
+}
+
+#location-icon {
+    position: absolute;
+    top: 18%;
+    right: 0%;
+    transition: all 2s ease-in-out;
+}
+
+.move-right {
+    left: 21% !important;
+}
+
+.move-left {
+    right: 21% !important; 
+}
+
+
+
+
+  .form-group {
+    align-items: center;
+    text-align: center;
+  }
+  .form-group input {
+    width: 50%;
+    height: 5vh;
+    border-radius: 20px;
+    border-width: 1px;
+    color: black;
+    padding: 0;
+    margin: 0;
+    margin-top: 7vh;
+    padding-left: 10px;
+  }
+  .form-group select {
+    width: 50%;
+    height: 5vh;
+    border-radius: 20px;
+    color: black;
+    padding: 0;
+    margin: -2vh;
+    padding-left: 10px;
+  }
+
+ #scroll {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    top: 92%;
+}
+  /* .search-group button {
+    position: absolute;
+    top:60%;
+    right: 20%;
+  } */
+
+
+/* results:  */
+#store-container {
+    width: 96vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    padding: 0;
+    margin-top: 35vh;
+    padding-top: 10vh;
+}
+
+.store {
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px;
+    width: calc((96vw - 80px) / 4);
+    height: 55vh;
+    text-align: center; 
+    background-color: #F5F0E4;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center; 
+    border-radius: 1vh;
+    }
+
+.store img {
+    max-width: 80%;
+    min-width: 70%;
+    height: 33vh;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 2vh;
+}
+
+.store p {
+    margin: 0;
+    align-self: flex-start; 
+    margin-left: 3vw;
+    margin-right: 3vw;
+    line-height: 1.5;
+}
+
+
+
+
+/* More Info and Review Page */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-section {
+    width: 60%;
+    border-right: 2px solid #ccc;
+}
+
+.right-section {
+    width: 40%;
+    padding: 20px;
+}
+
+.review-section textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.review-section button {
+    margin-bottom: 20px;
+}
+
+.reviews .review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review .review-content {
+    flex-grow: 1;
+}
+
+.review .like-button {
+    background-color: #F5F0E4;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.review .like-count {
+    font-size: 14px;
+}
+
+
+/* ---------- Footer -------- */
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  #down {
+      padding-bottom: 25vh;
+      margin-top: 10vh;
+     } 
+  #down2 {
+      padding-bottom: 25vh;
+      width: 96vw;
+     }
+
+
+
+
+    
+
+  
+  @media screen and (max-width: 700px) {
+      .header h2 {
+          margin-left: 3vw;
+      }
+  
+      .home-intro h1 {
+          margin-left: 20vw;
+          margin-top: 10vh;
+          font-size: 42px;
+          font-weight: 100;
+      }
+      .right {
+          gap: 5vw;
+          padding-right: 5vw;
+      }
+  
+      .home-intro {
+          background-position: center center;
+          margin: 0;
+      }
+      .home-container {
+          width: 100%;
+          scroll-snap-type: y mandatory;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          margin: 0;
+          padding: 0;
+      }
+      section {
+          position: relative;
+          width: 100%; 
+          margin: 0;
+      }
+      .overlay{
+          position: absolute;
+          bottom: 0;
+          left: 3vw;
+          right: 0;
+          background-color: black,0.75;
+          overflow: hidden;
+          width: 94%;
+          height: 0;
+          transition: 0.5s ease;
+      }
+      .home-intro:hover .overlay{
+          height: 90%;
+          background: rgb(255,255,255,0.7);
+          border-style: solid;
+          border-width: 3px;
+          border-color: #F0E5DA;      
+  
+      }
+      .start-button {
+          position: relative;
+          top: 0vh;
+          left: 33vw;
+          background-color: #F0E5DA;
+          border-color: black;
+          border-radius: 5px;
+          border-width: 2px;
+          padding: 10px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+      }
+      .home-option {
+          margin: 0;
+      }
+      .home-question {
+          padding-top: 15vh;
+          padding-left: 9vw;
+          padding-bottom: 2vh;
+      }
+      .home-answer {
+          align-items: center;
+          padding-top: 2vh;
+          padding-left: 9vw;
+          padding-bottom: 15vh;
+      }
+      .home-answer-buttons button{
+          margin-top: 1vh;
+          width: 18vw;
+          height: 6vh;
+          border-radius: 5px;
+          background-color: white;
+          border-width: 1px;
+          border-color: black;
+          font-size: 18px;
+      }
+      .home-question, .home-answer{
+        background-color: #F0E5DA;
+      }
+
+      /*-------- search.html ------*/
+      #location-icon {
+        display: none;
+      }
+      .form-group input {
+        width: 80vw;
+      }
+      .form-group select {
+        width: 80vw;
+      }
+      #scroll {
+        left: 33%;
+      }
+      .store {
+        width: calc((96vw - 80px) / 2);
+
+      }
+      .store img {
+        height: 31vh;
+        max-width: 83%;
+      }
+      #clothes-icon {
+        width: 400px;
+        height: 220px;
+     }
+
+  }
+  
+  @media screen and (min-width: 700px) and (max-width: 1023px) {
+  
+      .right {
+          gap: 5vw;
+          padding-right: 5vw;
+      }
+  
+      .home-intro {
+          margin-left: 15vw;
+          padding-top: 18vh;
+          position: relative;
+          background-image: url('bg.jpeg');
+          background-position: center center;
+          background-size:  auto 65% auto;
+          background-repeat: no-repeat; 
+      }
+      .home-intro h1 {
+        margin-left: 18vw;
+        margin-top: 8vh;
+        font-size:42px;
+        font-weight: 100;
+    }
+      .overlay{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: black,0.75;
+          overflow: hidden;
+          width: 100%;
+          height: 0;
+          transition: 0.5s ease;
+      }
+      .home-intro:hover .overlay{
+          height: 89%;
+          background: rgb(255,255,255,0.7);
+          border-style: solid;
+          border-width: 3px;
+          border-color: #F0E5DA;      
+      }
+      .start-button {
+          position: relative;
+          top: 1vh;
+          left: 28vw;
+          background-color: #F0E5DA;
+          border-color: black;
+          border-radius: 5px;
+          border-width: 2px;
+          padding: 10px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+      }
+  
+      .home-option {
+          margin: 0;
+      }
+      .home-question {
+          padding-top: 15vh;
+          padding-left: 9vw;
+          padding-bottom: 2vh;
+      }
+      .home-answer {
+          align-items: center;
+          padding-top: 2vh;
+          padding-left: 9vw;
+          padding-bottom: 10vh;
+      }
+     .home-answer-buttons button{
+          margin-top: 3vh;
+          width: 18vw;
+          height: 6vh;
+          border-radius: 5px;
+          background-color: white;
+          border-width: 1px;
+          border-color: black;
+          font-size: 18px;
+      }
+      #clothes-icon {
+        width: 600px;
+        height: 220px;
+     }
+  /*-------- search.html ------*/
+    #location-icon {
+        display: none;
+        }
+        .form-group input {
+        width: 80vw;
+        }
+        .form-group select {
+        width: 80vw;
+        } 
+      #scroll {
+        left: 38%;
+      }
+      .store {
+        width: calc((96vw - 80px) / 3);
+      }
+      .store img {
+        height: 33vh;
+        max-width: 86%;
+      }
+  }
+  
+  @media screen and (min-width: 1023px) {
+      .header {
+          margin-left: 0vw;
+      }
+      .home-intro h1 {
+        margin-top: 10vh;
+        font-size: 42px;
+        font-weight: 100;
+    }
+      .header {
+          padding-left: 3vw;
+          padding-right: 3vw;
+      }
+  
+      .right {
+          gap: 5vw;
+          padding-right: 7vw;
+      }
+  
+      .home-intro h1 {
+          font-size: 42px;
+          font-weight: 100;
+      }
+      .home-intro {
+          padding-left: 13vw;
+          padding-right: 13vw;
+      }
+      .background-square {
+          position: absolute; 
+          top: 48%; 
+          left: 52%;  
+          width: 90vw; 
+          height: 650px;
+          background-color: transparent;  
+          border: 3px solid #F0E5DA; 
+          transform: translate(-50%, -50%);
+          z-index: 0; 
+      }
+      .start-button {
+          position: absolute;
+          left: 13vw;
+          top: 75vh;
+          background-color: #F0E5DA;
+          border-color: #F0E5DA;
+          border-radius: 5px;
+          border-width: 3px;
+          padding: 14px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+      }
+  
+      .home-option {
+          margin: 0;
+      }
+      .home-question {
+          padding-top: 13vh;
+          padding-left: 9vw;
+          padding-bottom: 1vh;
+      }
+      .home-answer {
+          align-items: center;
+          padding-top: 0vh;
+          padding-left: 9vw;
+      }
+      .home-answer-buttons button{
+          margin-top: 3vh;
+          width: 18vw;
+          height: 7vh;
+          border-radius: 5px;
+          background-color: white;
+          border-width: 1px;
+          border-color: black;
+          font-size: 18px;
+      }
+
+      .home-question h2:hover {
+        cursor: help;
+    }
+
+
+    /*-------- search.html ------*/
+    #scroll {
+        left: 42%;
+      }
+  }
+  
+
+  a .start-button:hover{
+      background-color: rgb(255,255,255,0.7);
+      cursor: pointer;
+  }
+    
+.home-answer-buttons button:hover {
+    cursor: pointer; 
+    background-color: #F0E5DA; 
+}
